@@ -1,4 +1,20 @@
+# Ignorera allt i data men behåll mappstrukturen
 
-# Ignorera allt i data/
-data/**
-!data/**/.gitkeep
+# Ignorera allt under data
+/data/*
+
+# Tillåt behöriga kataloger
+!data/.gitkeep
+!data/raw/
+!data/processed/
+!data/output/
+
+# Ignorera allt i dessa kataloger
+/data/raw/*
+/data/processed/*
+/data/output/*
+
+# Tillåt .gitkeep-filer
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/output/.gitkeep
