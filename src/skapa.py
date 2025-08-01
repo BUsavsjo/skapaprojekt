@@ -3,7 +3,11 @@ from datetime import datetime
 
 PROJEKTMALLAR = {
     "python": {
-        "data": [],
+        "data": [
+            "raw/.gitkeep",
+            "processed/.gitkeep",
+            "output/.gitkeep",
+        ],
         "dokumentation": ["README.md"],
         "src": ["__init__.py"],
         "tests": [],
@@ -21,8 +25,18 @@ PROJEKTMALLAR = {
 }
 
 GITIGNORE_REGLER = {
-    "python": ["# Ignorera allt i data/", "data/*", "!data/.gitkeep"],
-    "webb": ["# Ignorera node_modules och byggfiler", "node_modules/", "dist/", "data/*", "!data/.gitkeep"]
+    "python": [
+        "# Ignorera allt i data/",
+        "data/**",
+        "!data/**/.gitkeep",
+    ],
+    "webb": [
+        "# Ignorera node_modules och byggfiler",
+        "node_modules/",
+        "dist/",
+        "data/**",
+        "!data/**/.gitkeep",
+    ],
 }
 
 EDITORCONFIG_INNEHALL = """root = true
